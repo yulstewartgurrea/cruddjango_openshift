@@ -1,0 +1,50 @@
+{% block content %}
+    <table class="table table-bordered" border = 2>
+        <thead>
+        <tr>
+            <th>User Name</th>
+            <th>User ID</th>
+            <th>User Address</th>
+            
+            <th colspan = "2"> Options </th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for user in object_list %}
+                
+                    <tr>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.user_id }}</td>
+                        <td>{{ user.address }}</td>
+                        <td><a href="{% url "user_edit" user.id%}">Edit</a></td> 
+                        <td><a href="{% url "user_delete" user.id %}">Delete</a></td> 
+
+                    </tr>
+                
+            {% endfor %}
+            
+        </tbody>
+    </table>
+    <a href = "{% url "user_new" %}"> New </a> 
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
