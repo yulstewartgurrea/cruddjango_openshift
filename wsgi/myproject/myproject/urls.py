@@ -19,5 +19,5 @@ from crudapp import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^crudapp/', include('crudapp.urls')),
+    url(r'^/', include('crudapp.urls')),
 ]
